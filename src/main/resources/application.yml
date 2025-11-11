@@ -1,0 +1,9 @@
+mp:
+  messaging:
+    incoming:
+      notifications-in:
+        auto.offset.reset: earliest
+        topic: notifications
+    outgoing:
+      notifications-out:
+        topic: notifications
