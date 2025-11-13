@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.acme.inout.Channel;
 
 @Getter
 @Builder
@@ -13,5 +12,5 @@ import org.acme.inout.Channel;
 public class DestinationNotificationDTO {
 
     private String content;
-    private Channel destinationChannel;
+    private String destinationTopic;
 }

@@ -2,8 +2,13 @@ mp:
   messaging:
     incoming:
       notifications-in:
+        connector: smallrye-kafka
+        topics: notifications,notifications-whatsapp,notifications-email,notifications-cellphone
+        value.deserializer: org.acme.serialization.DestinationNotificationDTODeserializer
+        group.id: notifications-group
         auto.offset.reset: earliest
-        topic: notifications
     outgoing:
       notifications-out:
+        connector: smallrye-kafka
         topic: notifications
+        value.serializer: io.quarkus.kafka.client.serialization.ObjectMapperSerializer
